@@ -28,6 +28,7 @@ import (
 // +k8s:defaulter-gen=true
 // +kubebuilder:subresource:status
 // +kubebuilder:resource:scope=Namespaced,shortName=tenant,singular=tenant
+// +kubebuilder:printcolumn:name="STATUS",type=string,JSONPath=`.status.currentState`,description="The current status of the minIO tenants",priority=0
 
 // Tenant is a specification for a MinIO resource
 type Tenant struct {
